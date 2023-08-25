@@ -2,6 +2,12 @@
 :root {
     --text-color: #333;
     --accent-color-green: #0A775F;
+    --accent-color-green-80: rgba(10, 119, 95, 0.8);
+    --accent-color-green-60: rgba(10, 119, 95, 0.6);
+    --accent-color-brown: #c99b67;
+    --accent-color-brown-80: rgba(201, 155, 103, 0.8);
+    --accent-color-brown-60: rgba(201, 155, 103, 0.6);
+    --light-brown: #f3d7b7;
     --outline-color: var(--accent-color-green);
 }
 
@@ -53,8 +59,52 @@ img {
     margin-left: auto;
 }
 
-/* MAIN-CONTENT */
 
+/* BUTTON */
+.button {
+    display: inline-block;
+    padding: 16px 24px;
+    border: 0;
+    border-radius: 100px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-variant: all-small-caps;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.button-green {
+    color: #fff;
+    background-color: var(--accent-color-green);
+}
+
+.button-green:hover {
+    background-color: var(--accent-color-green-80);
+}
+
+.button-green:active {
+    background-color: var(--accent-color-green-60);
+}
+
+.button-brown {
+    background-color: var(--accent-color-brown);
+}
+
+.button-brown:hover {
+    background-color: var(--accent-color-brown-80);
+}
+
+.button-brown:active {
+    background-color: var(--accent-color-brown-60);
+}
+
+
+/* MAIN-CONTENT */
 main {
     flex-grow: 1;
 }
@@ -62,6 +112,7 @@ main {
 
 /* SITE-HEADER-HERO-WRAPPER */
 .site-header-hero-wrapper {
+    background-color: var(--light-brown);
     background-image: url("../img/site-header-content-bg.jpeg")
 }
 
@@ -82,6 +133,7 @@ main {
 
 .site-header-logo-link {
     display: flex;
+    flex-shrink: 0;
     text-decoration: none;
 }
 
@@ -120,6 +172,7 @@ main {
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .sitenav-link:hover {
@@ -128,6 +181,60 @@ main {
 
 .sitenav-link:active {
     opacity: 0.6;
+}
+
+
+/* HERO */
+.hero {
+
+}
+
+.hero-container {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero-info-wrapper {
+    width: 100%;
+    max-width: 730px;
+    padding-right: 116px;
+    padding-left: 150px;
+    padding-top: 116px;
+    padding-bottom: 100px;
+}
+
+.hero-heading {
+    margin: 0;
+    color: #000;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.hero-text {
+    margin: 0;
+    margin-top: 24px;
+    margin-bottom: 0;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+.hero-text:not(:last-child) {
+    margin-bottom: 34px;
+}
+
+.hero-img {
+    width: 710px;
+    height: 596px;
+    object-fit: cover;
+}
+
+.hero-img-index {
+    height: 696px;
 }
 
 /* RETINA-BG */
