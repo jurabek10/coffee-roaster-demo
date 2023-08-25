@@ -1,3 +1,11 @@
+/* CUSTOM PROPS */
+:root {
+    --text-color: #333;
+    --accent-color-green: #0A775F;
+    --outline-color: var(--accent-color-green);
+}
+
+
 /* GLOBAL STYLES */
 html {
     height: 100%;
@@ -18,15 +26,21 @@ body {
     padding: 0;
     margin: 0;
     font-size: 16px;
+    line-height: 1.75;
     font-family: "Roboto", "Arial", sans-serif;
     background-color: #fff;
-    color: #000;
+    color: var(--text-color);
 }
 
 img {
     max-width: 100%;
     height: auto;
 }
+
+*:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 3px;
+} 
 
 
 /* CONTAINER */
@@ -45,4 +59,86 @@ main {
     flex-grow: 1;
 }
 
+
+/* SITE-HEADER-HERO-WRAPPER */
+.site-header-hero-wrapper {
+    background-image: url("../img/site-header-content-bg.jpeg")
+}
+
+
+/* SITE-HEADER */
+.site-header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.site-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.site-header-logo-link {
+    display: flex;
+    text-decoration: none;
+}
+
+.site-header-logo-link:hover {
+    opacity: 0.8;
+}
+
+.site-header-logo-link:active {
+    opacity: 0.6;
+}
+
+.site-header-logo-img {
+    width: 235px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.sitenav-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sitenav-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.sitenav-link {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sitenav-link:hover {
+    color: var(--accent-color-green)
+}
+
+.sitenav-link:active {
+    opacity: 0.6;
+}
+
+/* RETINA-BG */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+
+}
 
