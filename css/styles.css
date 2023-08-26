@@ -8,6 +8,7 @@
     --accent-color-brown-80: rgba(201, 155, 103, 0.8);
     --accent-color-brown-60: rgba(201, 155, 103, 0.6);
     --light-brown: #f3d7b7;
+    --light-bg: #f8f8f2;
     --outline-color: var(--accent-color-green);
 }
 
@@ -107,6 +108,8 @@ img {
 /* MAIN-CONTENT */
 main {
     flex-grow: 1;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 
@@ -185,10 +188,6 @@ main {
 
 
 /* HERO */
-.hero {
-
-}
-
 .hero-container {
     display: flex;
     padding-left: 0;
@@ -236,6 +235,88 @@ main {
 .hero-img-index {
     height: 696px;
 }
+
+
+/* INDEX-COLLECTION */
+.index-collection-inner {
+    padding: 50px 143px;
+    background-color: var(--light-bg);
+    background-image: url("../img/products-bg.jpg");
+}
+
+.index-collection-heading {
+    margin: 0;
+    margin-bottom: 80px;
+    color: #000;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-variant: all-small-caps;
+}
+
+.index-collection-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.index-collection-item {
+    display: flex;
+    align-items: center;
+}
+
+.index-collection-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.index-collection-img {
+    width: 450px;
+    height: 375px;
+    object-fit: cover;
+}
+
+.index-collection-info {
+    flex-grow: 1;
+    padding-left: 117px;
+    padding-right: 117px;
+}
+
+.index-collection-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-variant: all-small-caps;
+    text-transform: uppercase;
+}
+
+.index-collection-text {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px; /* 154.545% */
+}
+
+.index-collection-text:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* .index-collection-item:nth-child(odd) .index-collection-info  {
+    padding-left: 117px;
+}
+
+.index-collection-item:nth-child(even) .index-collection-info {
+    padding-right: 117px;
+} */
+
+
 
 /* RETINA-BG */
 @media
